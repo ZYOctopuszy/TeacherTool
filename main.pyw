@@ -1,4 +1,4 @@
-# -*- coding: ANSI -*-
+# -*- coding: UTF-8 -*-
 
 from tkinter import *
 from HomeworkRegister import *
@@ -12,7 +12,7 @@ def getNumber():
         Number = int(number.get())
         get_number.destroy()
     else:
-        get_number.title("ÇëÊäÕıÕûÊı!!!")
+        get_number.title("è¯·è¾“å…¥æ­£æ•´æ•°")
 
 def yes_button():
     
@@ -27,12 +27,12 @@ def yes_button():
     
 
 get_number = Tk()
-get_number.title("ÇëÊäÈëÈ«°àÈËÊı")
+get_number.title("è¯·è¾“å…¥å…¨ç­äººæ•°")
 get_number.geometry("300x50")
 get_number.resizable(False, False)
 get_number.protocol("WM_DELETE_WINDOW", lambda: exit())
 number = Entry(get_number)
-yes = Button(get_number, text="È·ÈÏ", command=getNumber)
+yes = Button(get_number, text="ç¡®è®¤", command=getNumber)
 number.pack()
 yes.pack()
 get_number.mainloop()
@@ -40,18 +40,18 @@ get_number.mainloop()
 example = HomeworkRegister(list(i for i in range(1, Number + 1)))
 
 root = Tk()
-root.title("×÷ÒµµÇ¼ÇÆ÷")
+root.title("Teacher Tools")
 root.geometry("500x250")
 root.config(bg="skyblue")
 root.resizable(False, False)
 root.protocol("WM_DELETE_WINDOW", lambda: exit())
 
-tips = Label(root, text="ÇëÊäÈëÒÑ½»Ãûµ¥:", bg="skyblue")
+tips = Label(root, text="å·²äº¤åå•", bg="skyblue")
 done = Text(root, exportselection=1, width=70, height=5)
-yes = Button(root, text="Ìá½»", bg="skyblue", command=yes_button)
-tips2 = Label(root, text="Î´½»Ãûµ¥:", bg="skyblue")
+yes = Button(root, text="ç¡®è®¤", bg="skyblue", command=yes_button)
+tips2 = Label(root, text="æœªäº¤åå•", bg="skyblue")
 undone = Text(root, exportselection=1, width=70, height=5, bg="skyblue", state="disabled")
-get_split = Label(root, text="ÔÚ´ËÊäÈë·Ö¸î·û(Ä¬ÈÏÎª¿Õ¸ñ)")
+get_split = Label(root, text="è¯·è¾“å…¥åˆ†éš”ç¬¦(é»˜è®¤ä¸ºç©ºæ ¼):")
 split = Entry(root, exportselection=0)
 
 tips.place(relx=0.5, rely=0.05, anchor=CENTER)
